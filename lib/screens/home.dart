@@ -63,7 +63,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
-                                color: Colors.cyanAccent,
+                                color: Colors.amber,
 
                               ),
                             ),
@@ -95,7 +95,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                   color: Colors.amber,
                               ),
                             ),
                           )
@@ -132,7 +132,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                    color: Colors.amber,
                               ),
                             ),
                           ),
@@ -163,7 +163,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                  color: Colors.amber
                               ),
                             ),
                           )
@@ -201,7 +201,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                  color: Colors.amber
                               ),
                             ),
                           ),
@@ -233,7 +233,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                  color: Colors.amber
                               ),
                             ),
                           )
@@ -271,7 +271,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                  color: Colors.amber
                               ),
                             ),
                           ),
@@ -302,7 +302,7 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.cyanAccent
+                                  color: Colors.amber
                               ),
                             ),
                           )
