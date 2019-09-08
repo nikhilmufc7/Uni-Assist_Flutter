@@ -5,13 +5,16 @@ import 'holidays.dart';
 import 'events.dart';
 import 'courses.dart';
 import 'about.dart';
+import '../util/drawer.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: MainDrawer(),
       appBar: AppBar(
+
         title: Text(
           "DYPIU Assist",
           style: TextStyle(

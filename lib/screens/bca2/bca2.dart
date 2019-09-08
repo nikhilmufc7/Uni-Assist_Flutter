@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../todoscreen.dart';
 import '../faculty.dart';
 import './schedule2.dart';
+import 'referenceBooks2.dart';
 
 class BcaSecondYear extends StatelessWidget {
   static const routName = '/bca2';
@@ -111,7 +112,7 @@ class BcaSecondYear extends StatelessWidget {
                         height: 30,
                       ),
                       InkWell(
-                        onTap: ()=> debugPrint('pressed'),
+                        onTap: ()=> Navigator.of(context).pushNamed(ReferenceBooks2.routeName),
                         child: Container(
                           width: deviceSize.width,
                           height: 80,

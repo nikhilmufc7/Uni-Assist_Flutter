@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import './screens/courses.dart';
 import './screens/faculty.dart';
 import './screens/todoscreen.dart';
@@ -10,6 +12,8 @@ import './screens/bca2/schedule2.dart';
 import './screens/holidays.dart';
 import './screens/events.dart';
 import './screens/about.dart';
+import './screens/bca1/referenceBooks1.dart';
+import './screens/bca2/referenceBooks2.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,9 +22,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'DYPIU Assist',
 
       home: Home(),
+      initialRoute: '/',
       routes: {
         BcaFirstYear.routName: (ctx) => BcaFirstYear(),
         FirstYearSchedule.routeName: (ctx)=> FirstYearSchedule(),
@@ -32,7 +38,12 @@ class MyApp extends StatelessWidget {
         EventsScreen.routeName:(ctx) => EventsScreen(),
         CoursesScreen.routeName:(ctx)=> CoursesScreen(),
         AboutScreen.routeName: (ctx) => AboutScreen(),
-      }
+        ReferenceBooks.routeName:(ctx) => ReferenceBooks(),
+        ReferenceBooks2.routeName:(ctx) => ReferenceBooks2(),
+      },
+        onUnknownRoute: (settings) {
+      return MaterialPageRoute(builder: (ctx) => Home());
+    },
     );
   }
 }
