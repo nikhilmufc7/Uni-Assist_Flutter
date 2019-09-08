@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "33176445097",
+    "firebase_url": "https://dypiu-81b9d.firebaseio.com",
+    "project_id": "dypiu-81b9d",
+    "storage_bucket": "dypiu-81b9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33176445097:android:2a0197bc93dc81b11fc9b8",
+        "android_client_info": {
+          "package_name": "com.nikhilsingh.dypiuassist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33176445097-h2dfjfvos0ropko3nhdicvd8e5i0e2ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8DR3JO6JGR5ihKe0WvkpneGEUG_quIPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33176445097-h2dfjfvos0ropko3nhdicvd8e5i0e2ek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
