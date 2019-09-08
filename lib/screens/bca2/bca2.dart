@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import './schedule1.dart';
 import '../todoscreen.dart';
 import '../faculty.dart';
+import './schedule2.dart';
 
-class BcaFirstYear extends StatelessWidget {
-  static const routName = '/bca1';
+class BcaSecondYear extends StatelessWidget {
+  static const routName = '/bca2';
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "BCA First Year",
+          "BCA Second Year",
           style: TextStyle(
             fontWeight: FontWeight.w700,
             color: Colors.white,
@@ -35,13 +35,13 @@ class BcaFirstYear extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       InkWell(
-                        onTap: ()=> Navigator.of(context).pushNamed(FirstYearSchedule.routeName),
+                        onTap: ()=> Navigator.of(context).pushNamed(SecondYearSchedule.routeName),
                         child: Container(
                           width: deviceSize.width,
                           height: 80,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.blue,
+                            color: Colors.amber,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -73,7 +73,7 @@ class BcaFirstYear extends StatelessWidget {
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.blue,
+                            color: Colors.amber,
                           ),
                           child: Row(
 //                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -112,7 +112,7 @@ class BcaFirstYear extends StatelessWidget {
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.blue,
+                            color: Colors.amber,
                           ),
                           child: Row(
 //                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -152,7 +152,7 @@ class BcaFirstYear extends StatelessWidget {
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.blue,
+                            color: Colors.amber,
                           ),
                           child: Row(
 //                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,

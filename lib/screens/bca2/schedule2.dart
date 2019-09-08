@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstYearSchedule extends StatelessWidget {
-  static const routeName = '/schedule1';
+class SecondYearSchedule extends StatelessWidget {
+  static const routeName = '/schedule2';
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
@@ -51,9 +51,9 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: 20, right: 12),
                               child: Column(
-                                children: <Widget>[Text("9:30"), Text("10:30")],
+                                children: <Widget>[Text("9:30"), Text("12:30")],
                               ),
                             ),
                             Container(
@@ -67,14 +67,14 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Opearting Systems",
+                                    "Subject: Java Lab",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: 35),
                                       child: Text(
-                                        "For: Everyone",
+                                        "For: Div - A",
                                         textAlign: TextAlign.center,
                                       )),
                                 ],
@@ -89,14 +89,11 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[
-                                  Text("10:30"),
-                                  Text("11:30")
-                                ],
+                                children: <Widget>[Text("1:30"), Text("2:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: 25, right: 10),
                               height: 30,
                               width: 1.0,
                               color: Colors.grey,
@@ -106,12 +103,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Differential Mathematics",
+                                    "Subject: Software Engineering",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only(right: 100),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -125,10 +122,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[
-                                  Text("11:30"),
-                                  Text("12:30")
-                                ],
+                                children: <Widget>[Text("2:30"), Text("3:30")],
                               ),
                             ),
                             Container(
@@ -142,46 +136,13 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: C Programming",
+                                    "Subject: Software Engineering",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 65),
+                                      padding: EdgeInsets.only(right: 95),
                                       child: Text("For: Everyone")),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Divider(color: Colors.grey),
-                        Row(
-//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.only(left: 20, right: 27),
-                              child: Column(
-                                children: <Widget>[Text("1:30"), Text("4:30")],
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 50, right: 20),
-                              height: 30,
-                              width: 1.0,
-                              color: Colors.grey,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              child: Column(
-                                children: <Widget>[
-                                  Text(
-                                    "Subject: Operating Systems Lab",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w700),
-                                  ),
-                                  Container(
-                                      padding: EdgeInsets.only(right: 140),
-                                      child: Text("For: Div-A")),
                                 ],
                               ),
                             ),
@@ -224,7 +185,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[Text("9:30"), Text("10:30")],
+                                children: <Widget>[Text("9:30"), Text("12:30")],
                               ),
                             ),
                             Container(
@@ -238,14 +199,14 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: C Programming",
+                                    "Subject: WT Lab/ CN Lab",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 65),
+                                      padding: EdgeInsets.only(right: 50),
                                       child: Text(
-                                        "For: Everyone",
+                                        "For: Div A / Div B",
                                         textAlign: TextAlign.center,
                                       )),
                                 ],
@@ -258,12 +219,9 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: 20, right: 28),
                               child: Column(
-                                children: <Widget>[
-                                  Text("10:30"),
-                                  Text("11:30")
-                                ],
+                                children: <Widget>[Text("1:30"), Text("2:30")],
                               ),
                             ),
                             Container(
@@ -277,12 +235,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Differential Mathematics",
+                                    "Subject: Java Programming",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only(right: 85),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -294,12 +252,9 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: 20, right: 28),
                               child: Column(
-                                children: <Widget>[
-                                  Text("11:30"),
-                                  Text("12:30")
-                                ],
+                                children: <Widget>[Text("2:30"), Text("3:30")],
                               ),
                             ),
                             Container(
@@ -313,12 +268,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: FOC",
+                                    "Subject: Computer Networks",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 1),
+                                      padding: EdgeInsets.only(right: 80),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -332,7 +287,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 27),
                               child: Column(
-                                children: <Widget>[Text("1:30"), Text("4:30")],
+                                children: <Widget>[Text("3:30"), Text("4:30")],
                               ),
                             ),
                             Container(
@@ -346,13 +301,13 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: C Programming Lab",
+                                    "Subject: Web Technology",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 120),
-                                      child: Text("For: Div-A")),
+                                      padding: EdgeInsets.only(right: 70),
+                                      child: Text("For: Everyone")),
                                 ],
                               ),
                             ),
@@ -410,12 +365,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: FOC Tutorial",
+                                    "Subject: Java Programming",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 40),
+                                      padding: EdgeInsets.only(right: 90),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -449,12 +404,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: OS Tutorial",
+                                    "Subject: Computer Networks",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 40),
+                                      padding: EdgeInsets.only(right: 90),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -485,12 +440,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: C Programming Tutorial",
+                                    "Subject: Web Technology",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 115),
+                                      padding: EdgeInsets.only(right: 65),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -504,7 +459,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 27),
                               child: Column(
-                                children: <Widget>[Text("1:30"), Text("4:30")],
+                                children: <Widget>[Text("1:30"), Text("2:30")],
                               ),
                             ),
                             Container(
@@ -518,12 +473,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Operating Systems Lab",
+                                    "Subject: Software Engineering",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 140),
+                                      padding: EdgeInsets.only(right: 120),
                                       child: Text("For: Div-B")),
                                 ],
                               ),
@@ -557,7 +512,9 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Thursday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white),
                         ),
                         SizedBox(
                           height: 5,
@@ -568,7 +525,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[Text("9:30"), Text("10:30")],
+                                children: <Widget>[Text("9:30"), Text("12:30")],
                               ),
                             ),
                             Container(
@@ -582,14 +539,14 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Opearting Systems",
+                                    "Subject: Java Lab/ CN Lab",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: 60),
                                       child: Text(
-                                        "For: Everyone",
+                                        "For: Div B / Div A",
                                         textAlign: TextAlign.center,
                                       )),
                                 ],
@@ -602,12 +559,9 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: 20, right: 28),
                               child: Column(
-                                children: <Widget>[
-                                  Text("10:30"),
-                                  Text("11:30")
-                                ],
+                                children: <Widget>[Text("1:30"), Text("2:30")],
                               ),
                             ),
                             Container(
@@ -621,43 +575,7 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Differential Mathematics",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w700),
-                                  ),
-                                  Container(
-                                      padding: EdgeInsets.only(right: 125),
-                                      child: Text("For: Everyone")),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                        Divider(color: Colors.black),
-                        Row(
-//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              child: Column(
-                                children: <Widget>[
-                                  Text("11:30"),
-                                  Text("12:30")
-                                ],
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
-                              color: Colors.black,
-                            ),
-                            Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              child: Column(
-                                children: <Widget>[
-                                  Text(
-                                    "Subject: C Programming",
+                                    "Subject: Web Technology",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
@@ -674,9 +592,42 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
+                              padding: EdgeInsets.only(left: 20, right: 28),
+                              child: Column(
+                                children: <Widget>[Text("2:30"), Text("3:30")],
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              height: 30,
+                              width: 1.0,
+                              color: Colors.black,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 20, right: 20),
+                              child: Column(
+                                children: <Widget>[
+                                  Text(
+                                    "Subject: Java Programming",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w700),
+                                  ),
+                                  Container(
+                                      padding: EdgeInsets.only(right: 75),
+                                      child: Text("For: Everyone")),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        Divider(color: Colors.black),
+                        Row(
+//                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Container(
                               padding: EdgeInsets.only(left: 20, right: 27),
                               child: Column(
-                                children: <Widget>[Text("1:30"), Text("4:30")],
+                                children: <Widget>[Text("3:30"), Text("4:30")],
                               ),
                             ),
                             Container(
@@ -690,13 +641,13 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Operating Systems Lab",
+                                    "Subject: Computer Networks",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 140),
-                                      child: Text("For: Div-A")),
+                                      padding: EdgeInsets.only(right: 90),
+                                      child: Text("For: Everyone")),
                                 ],
                               ),
                             ),
@@ -739,7 +690,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[Text("9:30"), Text("10:30")],
+                                children: <Widget>[Text("9:30"), Text("12:30")],
                               ),
                             ),
                             Container(
@@ -753,14 +704,14 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: FOC",
+                                    "Subject: Web Technology Lab",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 5),
+                                      padding: EdgeInsets.only(right: 115),
                                       child: Text(
-                                        "For: Everyone",
+                                        "For: Div - B",
                                         textAlign: TextAlign.center,
                                       )),
                                 ],
@@ -773,12 +724,9 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: 20, right: 28),
                               child: Column(
-                                children: <Widget>[
-                                  Text("10:30"),
-                                  Text("11:30")
-                                ],
+                                children: <Widget>[Text("1:30"), Text("2:30")],
                               ),
                             ),
                             Container(
@@ -792,12 +740,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: C Programming",
+                                    "Subject: Java Tutorial",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 60),
+                                      padding: EdgeInsets.only(right: 40),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -828,12 +776,12 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Operating Systems",
+                                    "Subject: WT Tutorial",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: 35),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -847,7 +795,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 27),
                               child: Column(
-                                children: <Widget>[Text("1:30"), Text("4:30")],
+                                children: <Widget>[Text("3:30"), Text("4:30")],
                               ),
                             ),
                             Container(
@@ -861,13 +809,13 @@ class FirstYearSchedule extends StatelessWidget {
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: C Programming Lab",
+                                    "Subject: SE Tutorial",
                                     style:
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 120),
-                                      child: Text("For: Div-B")),
+                                      padding: EdgeInsets.only(right: 30),
+                                      child: Text("For: Everyone")),
                                 ],
                               ),
                             ),
@@ -944,10 +892,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[
-                                  Text("1:30"),
-                                  Text("4:30")
-                                ],
+                                children: <Widget>[Text("12:30"), Text("4:30")],
                               ),
                             ),
                             Container(
@@ -966,18 +911,17 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only(right: 105),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
                             ),
                           ],
                         ),
-
                         SizedBox(
-
                           height: 25,
                         )
+
                       ],
                     ),
                   ),

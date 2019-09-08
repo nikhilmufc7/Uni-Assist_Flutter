@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'bca1/bca1.dart';
-
+import 'bca2/bca2.dart';
+import 'holidays.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -39,7 +40,6 @@ class Home extends StatelessWidget {
                             onTap: () => Navigator.of(context).pushNamed(BcaFirstYear.routName),
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
-
                             child: Container(
                               margin: EdgeInsets.only(top: 20),
                               width: 160,
@@ -69,7 +69,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           InkWell(
-                            onTap: () => debugPrint("hello"),
+                            onTap: () => Navigator.of(context).pushNamed(BcaSecondYear.routName),
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
 
@@ -137,7 +137,7 @@ class Home extends StatelessWidget {
                             ),
                           ),
                           InkWell(
-                            onTap: () => debugPrint("hello"),
+                            onTap: () => Navigator.of(context).pushNamed(HolidayList.routeName),
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
 
