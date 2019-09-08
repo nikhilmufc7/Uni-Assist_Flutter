@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'bca1/bca1.dart';
 import 'bca2/bca2.dart';
 import 'holidays.dart';
+import 'events.dart';
+import 'courses.dart';
+import 'about.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -10,7 +13,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "DY Patil International University",
+          "DYPIU Assist",
           style: TextStyle(
             fontWeight: FontWeight.w700,
             color: Colors.white,
@@ -22,10 +25,10 @@ class Home extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Stack(
-
           children: <Widget>[
             Container(
               height: deviceSize.height,
+
               child: ListView(
                 shrinkWrap: true,
                 children: <Widget>[
@@ -63,7 +66,10 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
-                                color: Colors.amber,
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [Colors.amber, Colors.grey])
 
                               ),
                             ),
@@ -82,20 +88,26 @@ class Home extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
-                                      Icons.library_books
+                                      Icons.library_books,
+
                                   ),
                                   Text(
                                     'BCA 2nd Year',
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontWeight: FontWeight.w900
+                                      fontWeight: FontWeight.w900,
+
+
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                   color: Colors.amber,
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [Colors.amber, Colors.grey])
                               ),
                             ),
                           )
@@ -106,7 +118,7 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           InkWell(
-                            onTap: () => debugPrint("hello"),
+                            onTap: () => Navigator.of(context).pushNamed(EventsScreen.routeName),
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
 
@@ -132,7 +144,10 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                    color: Colors.amber,
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [Colors.amber, Colors.grey])
                               ),
                             ),
                           ),
@@ -163,7 +178,10 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.amber
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [Colors.amber, Colors.grey])
                               ),
                             ),
                           )
@@ -174,77 +192,7 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           InkWell(
-                            onTap: () => debugPrint("hello"),
-                            splashColor: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(15),
-
-                            child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.assessment
-                                  ),
-
-                                  Text(
-                                    'Acheivements',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 18
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.amber
-                              ),
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => debugPrint("hello"),
-                            splashColor: Theme.of(context).primaryColor,
-                            borderRadius: BorderRadius.circular(15),
-
-                            child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.notifications_active
-                                  ),
-
-                                  Text(
-                                    'Notices',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 18
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15),
-                                  color: Colors.amber
-                              ),
-                            ),
-                          )
-                        ],
-
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          InkWell(
-                            onTap: () => debugPrint("hello"),
+                            onTap: () => Navigator.of(context).pushNamed(CoursesScreen.routeName),
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
 
@@ -271,12 +219,15 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.amber
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [Colors.amber, Colors.grey])
                               ),
                             ),
                           ),
                           InkWell(
-                            onTap: () => debugPrint("hello"),
+                            onTap: () => Navigator.of(context).pushNamed(AboutScreen.routeName),
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
 
@@ -302,7 +253,10 @@ class Home extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  color: Colors.amber
+                                  gradient: LinearGradient(
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft,
+                                      colors: [Colors.amber, Colors.grey])
                               ),
                             ),
                           )

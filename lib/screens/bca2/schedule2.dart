@@ -20,7 +20,7 @@ class SecondYearSchedule extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(bottom: 40),
-              height: 600,
+              height: deviceSize.height,
               child: ListView(
                 shrinkWrap: true,
                 children: <Widget>[
@@ -925,6 +925,9 @@ class SecondYearSchedule extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 100,
+                  )
                 ],
               ),
             )

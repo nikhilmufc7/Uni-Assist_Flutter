@@ -41,7 +41,10 @@ class BcaSecondYear extends StatelessWidget {
                           height: 80,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.amber,
+                              gradient: LinearGradient(
+                                  begin: Alignment.topRight,
+                                  end: Alignment.bottomLeft,
+                                  colors: [Colors.amber, Colors.grey])
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -73,7 +76,10 @@ class BcaSecondYear extends StatelessWidget {
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.amber,
+                              gradient: LinearGradient(
+                                  begin: Alignment.topRight,
+                                  end: Alignment.bottomLeft,
+                                  colors: [Colors.amber, Colors.grey])
                           ),
                           child: Row(
 //                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -112,7 +118,10 @@ class BcaSecondYear extends StatelessWidget {
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.amber,
+                              gradient: LinearGradient(
+                                  begin: Alignment.topRight,
+                                  end: Alignment.bottomLeft,
+                                  colors: [Colors.amber, Colors.grey])
                           ),
                           child: Row(
 //                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -152,7 +161,10 @@ class BcaSecondYear extends StatelessWidget {
 
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.amber,
+                              gradient: LinearGradient(
+                                  begin: Alignment.topRight,
+                                  end: Alignment.bottomLeft,
+                                  colors: [Colors.amber, Colors.grey])
                           ),
                           child: Row(
 //                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,

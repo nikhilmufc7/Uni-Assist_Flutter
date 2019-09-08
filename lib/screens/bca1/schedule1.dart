@@ -981,6 +981,9 @@ class FirstYearSchedule extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 100,
+                  )
                 ],
               ),
             )
