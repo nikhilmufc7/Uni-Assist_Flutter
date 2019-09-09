@@ -20,7 +20,7 @@ class FirstYearSchedule extends StatelessWidget {
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(bottom: 40),
-              height: 600,
+              height: deviceSize.height,
               child: ListView(
                 shrinkWrap: true,
                 children: <Widget>[
@@ -29,13 +29,10 @@ class FirstYearSchedule extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.white12,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.deepOrangeAccent.withOpacity(1.0),
-                            blurRadius: 5.0,
-                          ),
-                        ]),
+                        gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [Colors.amber, Colors.lightBlueAccent])),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -200,13 +197,13 @@ class FirstYearSchedule extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.orangeAccent.withOpacity(1.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5.0,
-                          ),
-                        ]),
+                        gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [
+                              Colors.white70,
+                              Colors.greenAccent
+                            ])),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -372,13 +369,10 @@ class FirstYearSchedule extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.tealAccent.withOpacity(1.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5.0,
-                          ),
-                        ]),
+                        gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [Colors.white, Colors.deepOrangeAccent])),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -544,13 +538,10 @@ class FirstYearSchedule extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.grey.withOpacity(1.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5.0,
-                          ),
-                        ]),
+                        gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [Colors.deepPurpleAccent, Colors.white])),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -715,13 +706,10 @@ class FirstYearSchedule extends StatelessWidget {
                     padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.amberAccent.withOpacity(1.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5.0,
-                          ),
-                        ]),
+                        gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [Colors.teal, Colors.white])),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -879,18 +867,17 @@ class FirstYearSchedule extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                  ////// 6
                   Container(
                     margin: EdgeInsets.only(top: 15, left: 10, right: 5),
                     padding: EdgeInsets.only(top: 10, left: 30, right: 30),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Colors.lightBlueAccent.withOpacity(1.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 5.0,
-                          ),
-                        ]),
+                        gradient: LinearGradient(
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: [Colors.yellow, Colors.grey])),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -944,10 +931,7 @@ class FirstYearSchedule extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(left: 20, right: 20),
                               child: Column(
-                                children: <Widget>[
-                                  Text("1:30"),
-                                  Text("4:30")
-                                ],
+                                children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
@@ -973,9 +957,7 @@ class FirstYearSchedule extends StatelessWidget {
                             ),
                           ],
                         ),
-
                         SizedBox(
-
                           height: 25,
                         )
                       ],
