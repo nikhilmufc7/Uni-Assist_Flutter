@@ -1,4 +1,4 @@
-package com.example.dypiu_announcement;
+package com.nikhilsingh.dypiuassist;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
