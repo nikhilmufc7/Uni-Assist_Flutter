@@ -18,6 +18,7 @@ class CoursesScreen extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
       ),
       body: ListView.builder(
+        physics: ScrollPhysics(),
         itemBuilder: (BuildContext context, int index) =>
             EntryItem(data[index]),
         itemCount: data.length,

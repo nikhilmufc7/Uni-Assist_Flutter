@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FirstYearSchedule extends StatelessWidget {
   static const routeName = '/schedule1';
   @override
   Widget build(BuildContext context) {
+    double defaultScreenWidth = 828.0;
+    double defaultScreenHeight = 1792.0;
+    ScreenUtil.instance = ScreenUtil(
+      width: defaultScreenWidth,
+      height: defaultScreenHeight,
+      allowFontScaling: true,
+    )..init(context);
+
+
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "Schedule",
           style: TextStyle(
-              fontWeight: FontWeight.w700, fontSize: 22, color: Colors.white),
+              fontWeight: FontWeight.w700,
+              fontSize: ScreenUtil.instance.setSp(22.0),
+              color: Colors.white
+          ),
         ),
         centerTitle: true,
         backgroundColor: Colors.deepPurpleAccent,
@@ -19,14 +32,17 @@ class FirstYearSchedule extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(bottom: 40),
+              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(40)),
               height: deviceSize.height,
               child: ListView(
+                physics: ScrollPhysics(),
                 shrinkWrap: true,
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.only(top: 15, left: 10, right: 5),
-                    padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+                    margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15),
+                        left: ScreenUtil.instance.setWidth(10), right: ScreenUtil.instance.setWidth(5)),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(10),
+                        left: ScreenUtil.instance.setWidth(30), right: ScreenUtil.instance.setWidth(30)),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         gradient: LinearGradient(
@@ -39,28 +55,32 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Monday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: ScreenUtil.instance.setSp(18.0),
+                              fontWeight: FontWeight.w900),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: ScreenUtil.instance.setHeight(5),
                         ),
                         Row(
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("9:30"), Text("10:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
+                              padding:  EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
                               width: 1.0,
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -69,7 +89,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(85)),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -84,7 +104,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("10:30"),
@@ -93,22 +114,26 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
                               width: 1.0,
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
-                                    "Subject: Differential Mathematics",
+                                    "Subject: DM",
                                     style:
-                                        TextStyle(fontWeight: FontWeight.w700),
+                                        TextStyle(fontWeight: FontWeight.w700,
+                                        fontSize: 12),
+
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(125)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -120,7 +145,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("11:30"),
@@ -129,13 +155,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -144,7 +172,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 65),
+                                      padding: EdgeInsets.only(  right: ScreenUtil.instance.setWidth(65)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -156,19 +184,22 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 27),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(27)),
                               child: Column(
                                 children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 50, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(50),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -177,7 +208,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 140),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(120)),
                                       child: Text("For: Div-A")),
                                 ],
                               ),
@@ -185,7 +216,7 @@ class FirstYearSchedule extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height: ScreenUtil.instance.setHeight(25),
                         ),
                       ],
                     ),
@@ -193,8 +224,10 @@ class FirstYearSchedule extends StatelessWidget {
 
                   ///// Monday
                   Container(
-                    margin: EdgeInsets.only(top: 15, left: 10, right: 5),
-                    padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+                    margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15),
+                        left: ScreenUtil.instance.setWidth(10), right: ScreenUtil.instance.setWidth(5)),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(10),
+                        left: ScreenUtil.instance.setWidth(30), right: ScreenUtil.instance.setWidth(30)),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         gradient: LinearGradient(
@@ -210,28 +243,32 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Tuesday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: ScreenUtil.instance.setSp(18.0),
+                              fontWeight: FontWeight.w900),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: ScreenUtil.instance.setHeight(5),
                         ),
                         Row(
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("9:30"), Text("10:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -240,7 +277,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 65),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(65)),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -255,7 +292,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("10:30"),
@@ -264,13 +302,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -279,7 +319,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(125)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -291,7 +331,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("11:30"),
@@ -300,13 +341,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -315,7 +358,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 1),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(1)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -327,19 +370,22 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 27),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(27)),
                               child: Column(
                                 children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 50, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(50),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -348,7 +394,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 120),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(120)),
                                       child: Text("For: Div-A")),
                                 ],
                               ),
@@ -356,7 +402,7 @@ class FirstYearSchedule extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height: ScreenUtil.instance.setHeight(25),
                         ),
                       ],
                     ),
@@ -365,8 +411,10 @@ class FirstYearSchedule extends StatelessWidget {
                   /////  3
 
                   Container(
-                    margin: EdgeInsets.only(top: 15, left: 10, right: 5),
-                    padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+                    margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15),
+                        left: ScreenUtil.instance.setWidth(10), right: ScreenUtil.instance.setWidth(5)),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(10),
+                        left: ScreenUtil.instance.setWidth(30), right: ScreenUtil.instance.setWidth(30)),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         gradient: LinearGradient(
@@ -379,28 +427,32 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Wednesday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: ScreenUtil.instance.setSp(18.0),
+                              fontWeight: FontWeight.w900),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: ScreenUtil.instance.setHeight(5),
                         ),
                         Row(
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("9:30"), Text("10:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -409,7 +461,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 40),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(40)),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -424,7 +476,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("10:30"),
@@ -433,13 +486,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -448,7 +503,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 40),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(40)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -460,7 +515,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding:  EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("11:30"),
@@ -469,13 +525,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -484,7 +542,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 115),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(115)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -496,19 +554,22 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 27),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(27)),
                               child: Column(
                                 children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 50, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(50),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -517,7 +578,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 140),
+                                      padding: EdgeInsets.only( right: ScreenUtil.instance.setWidth(140)),
                                       child: Text("For: Div-B")),
                                 ],
                               ),
@@ -525,7 +586,7 @@ class FirstYearSchedule extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height: ScreenUtil.instance.setHeight(25),
                         ),
                       ],
                     ),
@@ -534,8 +595,10 @@ class FirstYearSchedule extends StatelessWidget {
                   ///// 4
 
                   Container(
-                    margin: EdgeInsets.only(top: 15, left: 10, right: 5),
-                    padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+                    margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15),
+                        left: ScreenUtil.instance.setWidth(10), right: ScreenUtil.instance.setWidth(5)),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(10),
+                        left: ScreenUtil.instance.setWidth(30), right: ScreenUtil.instance.setWidth(30)),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         gradient: LinearGradient(
@@ -548,28 +611,32 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Thursday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: ScreenUtil.instance.setSp(18.0),
+                              fontWeight: FontWeight.w900),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: ScreenUtil.instance.setHeight(5),
                         ),
                         Row(
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("9:30"), Text("10:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.black,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -578,7 +645,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(85)),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -593,7 +660,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("10:30"),
@@ -602,13 +670,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.black,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -617,7 +687,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(125)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -629,7 +699,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("11:30"),
@@ -638,13 +709,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.black,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -653,7 +726,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 65),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(65)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -665,19 +738,22 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 27),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(27)),
                               child: Column(
                                 children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 50, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(50),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.black,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -686,7 +762,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 140),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(140)),
                                       child: Text("For: Div-A")),
                                 ],
                               ),
@@ -694,7 +770,7 @@ class FirstYearSchedule extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height: ScreenUtil.instance.setHeight(25),
                         ),
                       ],
                     ),
@@ -702,8 +778,10 @@ class FirstYearSchedule extends StatelessWidget {
                   /////5
 
                   Container(
-                    margin: EdgeInsets.only(top: 15, left: 10, right: 5),
-                    padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+                    margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15),
+                        left: ScreenUtil.instance.setWidth(10), right: ScreenUtil.instance.setWidth(5)),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(10),
+                        left: ScreenUtil.instance.setWidth(30), right: ScreenUtil.instance.setWidth(30)),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         gradient: LinearGradient(
@@ -716,28 +794,32 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Friday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: ScreenUtil.instance.setSp(18.0),
+                              fontWeight: FontWeight.w900),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: ScreenUtil.instance.setHeight(5),
                         ),
                         Row(
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("9:30"), Text("10:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -746,7 +828,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 5),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(5)),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -761,7 +843,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("10:30"),
@@ -770,13 +853,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -785,7 +870,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 60),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(60)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -797,7 +882,8 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text("11:30"),
@@ -806,13 +892,15 @@ class FirstYearSchedule extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -821,7 +909,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(85)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -833,19 +921,22 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 27),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(27)),
                               child: Column(
                                 children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 50, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(50),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -854,7 +945,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 120),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(120)),
                                       child: Text("For: Div-B")),
                                 ],
                               ),
@@ -862,7 +953,7 @@ class FirstYearSchedule extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height: ScreenUtil.instance.setHeight(25),
                         ),
                       ],
                     ),
@@ -870,8 +961,10 @@ class FirstYearSchedule extends StatelessWidget {
 
                   ////// 6
                   Container(
-                    margin: EdgeInsets.only(top: 15, left: 10, right: 5),
-                    padding: EdgeInsets.only(top: 10, left: 30, right: 30),
+                    margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15),
+                        left: ScreenUtil.instance.setWidth(10), right: ScreenUtil.instance.setWidth(5)),
+                    padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(10),
+                        left: ScreenUtil.instance.setWidth(30), right: ScreenUtil.instance.setWidth(30)),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         gradient: LinearGradient(
@@ -884,28 +977,32 @@ class FirstYearSchedule extends StatelessWidget {
                         Text(
                           "Saturday",
                           style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w900),
+                              fontSize: ScreenUtil.instance.setSp(18.0),
+                              fontWeight: FontWeight.w900),
                         ),
                         SizedBox(
-                          height: 5,
+                          height:ScreenUtil.instance.setHeight(5),
                         ),
                         Row(
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("9:30"), Text("12:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -914,7 +1011,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 85),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(85)),
                                       child: Text(
                                         "For: Everyone",
                                         textAlign: TextAlign.center,
@@ -929,19 +1026,22 @@ class FirstYearSchedule extends StatelessWidget {
 //                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[Text("1:30"), Text("4:30")],
                               ),
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
-                              height: 30,
-                              width: 1.0,
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
+                              height: ScreenUtil.instance.setHeight(30),
+                              width: ScreenUtil.instance.setWidth(1),
                               color: Colors.grey,
                             ),
                             Container(
-                              padding: EdgeInsets.only(left: 20, right: 20),
+                              padding: EdgeInsets.only(left: ScreenUtil.instance.setWidth(20),
+                                  right: ScreenUtil.instance.setWidth(20)),
                               child: Column(
                                 children: <Widget>[
                                   Text(
@@ -950,7 +1050,7 @@ class FirstYearSchedule extends StatelessWidget {
                                         TextStyle(fontWeight: FontWeight.w700),
                                   ),
                                   Container(
-                                      padding: EdgeInsets.only(right: 125),
+                                      padding: EdgeInsets.only(right: ScreenUtil.instance.setWidth(125)),
                                       child: Text("For: Everyone")),
                                 ],
                               ),
@@ -958,13 +1058,13 @@ class FirstYearSchedule extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height:ScreenUtil.instance.setHeight(25),
                         )
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 100,
+                    height: ScreenUtil.instance.setHeight(100),
                   )
                 ],
               ),

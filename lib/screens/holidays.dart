@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HolidayList extends StatelessWidget {
   static const routeName = '/holidays';
   @override
   Widget build(BuildContext context) {
+    double defaultScreenWidth = 400.0;
+    double defaultScreenHeight = 810.0;
+    ScreenUtil.instance = ScreenUtil(
+      width: defaultScreenWidth,
+      height: defaultScreenHeight,
+      allowFontScaling: true,
+    )..init(context);
+
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -12,7 +21,7 @@ class HolidayList extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.w700,
             color: Colors.white,
-            fontSize: 22,
+            fontSize: ScreenUtil.instance.setSp(22.0),
           ),
         ),
         centerTitle: true,
@@ -22,9 +31,10 @@ class HolidayList extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              height: 600,
+              height: deviceSize.height,
               width: double.infinity,
               child: ListView(
+                physics: ScrollPhysics(),
                 shrinkWrap: true,
                 children: <Widget>[
                   Column(
@@ -35,10 +45,10 @@ class HolidayList extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -48,13 +58,13 @@ class HolidayList extends StatelessWidget {
                                       '6\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Sept',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -62,7 +72,7 @@ class HolidayList extends StatelessWidget {
                                   'Gauri Poojan',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -72,10 +82,10 @@ class HolidayList extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -85,13 +95,13 @@ class HolidayList extends StatelessWidget {
                                       '10\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Sept',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -99,7 +109,7 @@ class HolidayList extends StatelessWidget {
                                   'Muharram',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -116,10 +126,10 @@ class HolidayList extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -129,13 +139,13 @@ class HolidayList extends StatelessWidget {
                                       '12\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Sept',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -143,7 +153,7 @@ class HolidayList extends StatelessWidget {
                                   'Anant Chaturdashi',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 15),
+                                      fontSize: ScreenUtil.instance.setSp(15.0)),
                                 ),
                               ],
                             ),
@@ -153,10 +163,10 @@ class HolidayList extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -166,13 +176,13 @@ class HolidayList extends StatelessWidget {
                                       '2\u207f\u1d48',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -180,7 +190,7 @@ class HolidayList extends StatelessWidget {
                                   'Gandhi Jayanti',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -197,10 +207,10 @@ class HolidayList extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -210,13 +220,13 @@ class HolidayList extends StatelessWidget {
                                       '8\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -224,7 +234,7 @@ class HolidayList extends StatelessWidget {
                                   'Dassehra',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -234,10 +244,10 @@ class HolidayList extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -247,13 +257,13 @@ class HolidayList extends StatelessWidget {
                                       '25\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -261,7 +271,7 @@ class HolidayList extends StatelessWidget {
                                   'Dhanteras',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -278,10 +288,10 @@ class HolidayList extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -291,13 +301,13 @@ class HolidayList extends StatelessWidget {
                                       '28\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -305,7 +315,7 @@ class HolidayList extends StatelessWidget {
                                   'Diwali',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -315,10 +325,10 @@ class HolidayList extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -328,13 +338,13 @@ class HolidayList extends StatelessWidget {
                                       '29\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -342,7 +352,7 @@ class HolidayList extends StatelessWidget {
                                   'Bhai Dooj',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),
@@ -359,10 +369,10 @@ class HolidayList extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -372,13 +382,13 @@ class HolidayList extends StatelessWidget {
                                       '12\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Nov',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -386,7 +396,7 @@ class HolidayList extends StatelessWidget {
                                   'Gurunanak Jayanti',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(14.0)),
                                 ),
                               ],
                             ),
@@ -396,10 +406,10 @@ class HolidayList extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(top: 20),
-                            width: 160,
-                            height: 130,
-                            padding: const EdgeInsets.all(15),
+                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            width: ScreenUtil.instance.setWidth(160),
+                            height: ScreenUtil.instance.setHeight(130),
+                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -409,13 +419,13 @@ class HolidayList extends StatelessWidget {
                                       '25\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 24),
+                                          fontSize: ScreenUtil.instance.setSp(24.0)),
                                     ),
                                     Text(
                                       'Dec',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: 20),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                   ],
                                 ),
@@ -423,7 +433,7 @@ class HolidayList extends StatelessWidget {
                                   'Christmas',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                                      fontSize: ScreenUtil.instance.setSp(18.0)),
                                 ),
                               ],
                             ),

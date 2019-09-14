@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ReferenceBooks2 extends StatelessWidget {
-  static const routeName = '/books';
+  static const routeName = '/books2';
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
@@ -64,6 +64,7 @@ class ReferenceBooks2 extends StatelessWidget {
                 ),
               ),
               ListView.builder(
+                physics: ScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) =>
                     EntryItem(data[index]),

@@ -6,10 +6,20 @@ import 'events.dart';
 import 'courses.dart';
 import 'about.dart';
 import '../util/drawer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    double defaultScreenWidth = 400.0;
+    double defaultScreenHeight = 810.0;
+    ScreenUtil.instance = ScreenUtil(
+      width: defaultScreenWidth,
+      height: defaultScreenHeight,
+      allowFontScaling: true,
+    )..init(context);
+
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       drawer: MainDrawer(),
@@ -20,18 +30,17 @@ class Home extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.w700,
             color: Colors.white,
-            fontSize: 22,
+            fontSize: ScreenUtil.instance.setSp(22.0),
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Color.fromRGBO(77, 77, 255, 0.7),
       ),
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
             Container(
               height: deviceSize.height,
-
               child: ListView(
                 shrinkWrap: true,
                 children: <Widget>[
@@ -47,32 +56,32 @@ class Home extends StatelessWidget {
                             splashColor: Theme.of(context).primaryColor,
                             borderRadius: BorderRadius.circular(15),
                             child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
+                              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15)),
+                              width: ScreenUtil.instance.setWidth(160),
+                              height: ScreenUtil.instance.setHeight(130),
+                              padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
                                     Icons.library_books,
+                                    size: ScreenUtil.instance.setSp(32.0),
+
 
                                   ),
                                   Text(
                                     'BCA 1st Year',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [Colors.amber, Colors.grey])
+                              color: Color.fromRGBO(255,77,77, 0.8)
+
 
                               ),
                             ),
@@ -83,34 +92,29 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
 
                             child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
+                              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15)),
+                              width: ScreenUtil.instance.setWidth(160),
+                              height: ScreenUtil.instance.setHeight(130),
+                              padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
                                       Icons.library_books,
-
+                                    size: ScreenUtil.instance.setSp(32.0),
                                   ),
                                   Text(
                                     'BCA 2nd Year',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
                                       fontWeight: FontWeight.w900,
-
-
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [Colors.amber, Colors.grey])
+                                  color: Color.fromRGBO(71, 209, 209, 0.9)
                               ),
                             ),
                           )
@@ -126,31 +130,29 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
 
                             child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
+                              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15)),
+                              width: ScreenUtil.instance.setWidth(160),
+                              height: ScreenUtil.instance.setHeight(130),
+                              padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
-                                      Icons.event
+                                      Icons.announcement,
+                                    size: ScreenUtil.instance.setSp(32.0),
                                   ),
                                   Text(
-                                    'Events',
+                                    'Announcements',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: 18
+                                      fontSize: ScreenUtil.instance.setSp(16.0)
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [Colors.amber, Colors.grey])
+                              color: Color.fromRGBO(255, 163, 26 ,0.8)
                               ),
                             ),
                           ),
@@ -160,31 +162,29 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
 
                             child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
+                              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15)),
+                              width: ScreenUtil.instance.setWidth(160),
+                              height: ScreenUtil.instance.setHeight(130),
+                              padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
-                                    Icons.airline_seat_flat
+                                    Icons.airline_seat_flat,
+                                    size: ScreenUtil.instance.setSp(32.0),
                                   ),
                                   Text(
                                     'Holiday List',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        fontSize: 18
+                                        fontSize: ScreenUtil.instance.setSp(18.0)
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [Colors.amber, Colors.grey])
+                              color: Color.fromRGBO(210, 121, 166, 0.8)
                               ),
                             ),
                           )
@@ -200,32 +200,29 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
 
                             child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
-                              padding: const EdgeInsets.all(15),
+                              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(15)),
+                              width: ScreenUtil.instance.setWidth(160),
+                              height: ScreenUtil.instance.setHeight(130),
+                              padding:  EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
-                                    Icons.apps
+                                    Icons.apps,
+                                    size: ScreenUtil.instance.setSp(32.0),
                                   ),
                                   Text(
                                     'Courses available',textAlign: TextAlign.center,
-
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        fontSize: 18
+                                        fontSize: ScreenUtil.instance.setSp(18.0)
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [Colors.amber, Colors.grey])
+                              color: Color.fromRGBO(153, 179, 255, 0.9)
                               ),
                             ),
                           ),
@@ -235,35 +232,33 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.circular(15),
 
                             child: Container(
-                              margin: EdgeInsets.only(top: 20),
-                              width: 160,
-                              height: 130,
+                              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                              width: ScreenUtil.instance.setWidth(160),
+                              height: ScreenUtil.instance.setHeight(130),
                               padding: const EdgeInsets.all(15),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: <Widget>[
                                   Icon(
-                                    Icons.info_outline
+                                    Icons.info_outline,
+                                    size: ScreenUtil.instance.setSp(32.0),
                                   ),
                                   Text(
                                     'About',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        fontSize: 18
+                                        fontSize: ScreenUtil.instance.setSp(18.0)
                                     ),
                                   ),
                                 ],
                               ),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
-                                  gradient: LinearGradient(
-                                      begin: Alignment.topRight,
-                                      end: Alignment.bottomLeft,
-                                      colors: [Colors.amber, Colors.grey])
+                              color: Color.fromRGBO(255, 140, 26, 0.6)
                               ),
                             ),
-                          )
-                        ],
+                          ),
+                            ],
 
                       ),
 

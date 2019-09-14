@@ -48,7 +48,7 @@ class AboutScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Text("Email bug reports at: "),
-                          Text("me@nikk.codes")
+                          Text("hey@nikk.codes")
                         ],
                       ),
                     )
@@ -56,6 +56,7 @@ class AboutScreen extends StatelessWidget {
                 ),
               ),
               ListView.builder(
+                physics: ScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) =>
                     EntryItem(data[index]),

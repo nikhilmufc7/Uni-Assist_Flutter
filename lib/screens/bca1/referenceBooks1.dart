@@ -64,6 +64,7 @@ class ReferenceBooks extends StatelessWidget {
                 ),
               ),
               ListView.builder(
+                physics: ScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (BuildContext context, int index) =>
                     EntryItem(data[index]),

@@ -1,16 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class SecondYearSchedule extends StatelessWidget {
   static const routeName = '/schedule2';
   @override
   Widget build(BuildContext context) {
+    double defaultScreenWidth = 400.0;
+    double defaultScreenHeight = 810.0;
+    ScreenUtil.instance = ScreenUtil(
+      width: defaultScreenWidth,
+      height: defaultScreenHeight,
+      allowFontScaling: true,
+    )..init(context);
+
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "Schedule",
           style: TextStyle(
-              fontWeight: FontWeight.w700, fontSize: 22, color: Colors.white),
+              fontWeight: FontWeight.w700,
+              fontSize: ScreenUtil.instance.setSp(22.0),
+              color: Colors.white),
         ),
         centerTitle: true,
         backgroundColor: Colors.deepPurpleAccent,
@@ -19,7 +31,7 @@ class SecondYearSchedule extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.only(bottom: 40),
+              margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(40)),
               height: deviceSize.height,
               child: ListView(
                 shrinkWrap: true,
