@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './schedule1.dart';
+import 'schedule1.dart';
 import '../todoscreen.dart';
 import '../faculty.dart';
 import 'referenceBooks1.dart';

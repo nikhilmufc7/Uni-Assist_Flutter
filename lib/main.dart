@@ -1,12 +1,11 @@
 import 'dart:async';
-
 import './screens/courses.dart';
 import './screens/faculty.dart';
 import './screens/todoscreen.dart';
 import 'package:flutter/material.dart';
 import './screens/home.dart';
 import './screens/bca1/bca1.dart';
-import './screens/bca1/schedule1.dart';
+import 'screens/bca1/schedule1.dart';
 import './screens/bca2/bca2.dart';
 import './screens/bca2/schedule2.dart';
 import './screens/holidays.dart';
@@ -40,6 +39,7 @@ class MyApp extends StatelessWidget {
         AboutScreen.routeName: (ctx) => AboutScreen(),
         ReferenceBooks.routeName:(ctx) => ReferenceBooks(),
         ReferenceBooks2.routeName:(ctx) => ReferenceBooks2(),
+
       },
         onUnknownRoute: (settings) {
       return MaterialPageRoute(builder: (ctx) => Home());

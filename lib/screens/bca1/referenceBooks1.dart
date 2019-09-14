@@ -126,6 +126,8 @@ final List<Entry> data = <Entry>[
     <Entry>[
       Entry(
           'Differential and Integral Calculus Vol. I by N S Piskunov'),
+      Entry(
+          'NCERT Class 12th Mathematics'),
     ],
   ),
 
