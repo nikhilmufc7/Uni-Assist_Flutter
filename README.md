@@ -1,16 +1,14 @@
-# dypiu_announcement
+# DYPIU Assist
 
-A new Flutter project.
+[<img src="https://play.google.com/intl/en_us/badges/images/badge_new.png">](https://play.google.com/store/apps/details?id=com.nikhilsingh.dypiuassist)
 
-## Getting Started
+A cross platform, light weight app built in a couple of hours for helping students with common problems at the university. Get your schedules, announcements, books to refer , information about teachers , make notes and a bunch of other things all packaged together.
 
-This project is a starting point for a Flutter application.
+## Uses Flutter and a bunch of open source packages and Firebase for the backend.
 
-A few resources to get you started if this is your first Flutter project:
+Version 2.0.0
+Optimised for all screen sizes.
+Fixed Navigation bugs.
+UI Changes
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Feel free to contribute.
