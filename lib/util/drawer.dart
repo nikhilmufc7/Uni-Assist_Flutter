@@ -45,7 +45,7 @@ class MainDrawer extends StatelessWidget {
             child: Text(
               "Assist",
               style: TextStyle(
-                fontWeight: FontWeight.w900,
+                fontWeight: FontWeight.w700,
                 fontSize: ScreenUtil.instance.setSp(30.0),
                 color: Theme.of(context).primaryColor,
               ),
