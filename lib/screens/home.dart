@@ -74,6 +74,7 @@ class Home extends StatelessWidget {
                                     style: TextStyle(
                                       fontWeight: FontWeight.w900,
                                       fontSize: ScreenUtil.instance.setSp(18.0),
+                                      letterSpacing: 2
                                     ),
                                   ),
                                 ],
@@ -108,6 +109,7 @@ class Home extends StatelessWidget {
                                     style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       fontWeight: FontWeight.w900,
+                                        letterSpacing: 2
                                     ),
                                   ),
                                 ],
@@ -142,10 +144,11 @@ class Home extends StatelessWidget {
                                     size: ScreenUtil.instance.setSp(32.0),
                                   ),
                                   Text(
-                                    'Announcements',
+                                    'Events',
                                     style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(16.0)
+                                      fontSize: ScreenUtil.instance.setSp(16.0),
+                                        letterSpacing: 2
                                     ),
                                   ),
                                 ],
@@ -177,7 +180,8 @@ class Home extends StatelessWidget {
                                     'Holiday List',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        fontSize: ScreenUtil.instance.setSp(18.0)
+                                        fontSize: ScreenUtil.instance.setSp(18.0),
+                                        letterSpacing: 2
                                     ),
                                   ),
                                 ],
@@ -215,7 +219,8 @@ class Home extends StatelessWidget {
                                     'Courses available',textAlign: TextAlign.center,
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        fontSize: ScreenUtil.instance.setSp(18.0)
+                                        fontSize: ScreenUtil.instance.setSp(18.0),
+                                        letterSpacing: 2
                                     ),
                                   ),
                                 ],
@@ -247,7 +252,8 @@ class Home extends StatelessWidget {
                                     'About',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w900,
-                                        fontSize: ScreenUtil.instance.setSp(18.0)
+                                        fontSize: ScreenUtil.instance.setSp(18.0),
+                                        letterSpacing: 2
                                     ),
                                   ),
                                 ],

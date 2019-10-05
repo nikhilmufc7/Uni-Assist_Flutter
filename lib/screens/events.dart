@@ -38,45 +38,45 @@ class _EventsScreenState extends State<EventsScreen> {
       ),
       body: Column(
         children: <Widget>[
-//          Flexible(
-//            flex: 0,
-//            child: Center(
-//
-//              child: Form(
-//                key: formKey,
-//                child: Flex(
-//                  direction: Axis.vertical,
-//                  children: <Widget>[
-//                    ListTile(
-//                      leading: new Icon(Icons.subject),
-//                      title: TextFormField(
-//                        initialValue: "",
-//                        autocorrect: true,
-//                        onSaved: (val) => board.subject = val,
-//                        validator: (val) => val == "" ? val : null,
-//                      ),
-//                    ),
-//                    ListTile(
-//                      leading: new Icon(Icons.message),
-//                      title: new TextFormField(
-//                        initialValue: "",
-//                        onSaved: (val) => board.body = val,
-//                        validator: (val) => val == "" ? val : null,
-//
-//                      ),
-//                    ),
-//                    FlatButton(
-//                      child: new Text("Post"),
-//                      color: Colors.redAccent,
-//                      onPressed:() {
-//                        handleSubmit();
-//                      },
-//                    )
-//                  ],
-//                ),
-//              ),
-//            ),
-//          ),
+          Flexible(
+            flex: 0,
+            child: Center(
+
+              child: Form(
+                key: formKey,
+                child: Flex(
+                  direction: Axis.vertical,
+                  children: <Widget>[
+                    ListTile(
+                      leading: new Icon(Icons.subject),
+                      title: TextFormField(
+                        initialValue: "",
+                        autocorrect: true,
+                        onSaved: (val) => board.subject = val,
+                        validator: (val) => val == "" ? val : null,
+                      ),
+                    ),
+                    ListTile(
+                      leading: new Icon(Icons.message),
+                      title: new TextFormField(
+                        initialValue: "",
+                        onSaved: (val) => board.body = val,
+                        validator: (val) => val == "" ? val : null,
+
+                      ),
+                    ),
+                    FlatButton(
+                      child: new Text("Post"),
+                      color: Colors.redAccent,
+                      onPressed:() {
+                        handleSubmit();
+                      },
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ),
           Flexible(
             child: FirebaseAnimatedList(
               query: databaseReference,

@@ -67,7 +67,8 @@ class BcaSecondYear extends StatelessWidget {
                                 "Weekly Schedule",
                                 style: TextStyle(
                                     fontSize: ScreenUtil.instance.setSp(24.0),
-                                    fontWeight: FontWeight.w900
+                                    fontWeight: FontWeight.w900,
+                                    letterSpacing: 1
                                 ),
                               )
                             ],
@@ -102,7 +103,8 @@ class BcaSecondYear extends StatelessWidget {
                                   "Add Short Notes",
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
-                                      fontWeight: FontWeight.w900
+                                      fontWeight: FontWeight.w900,
+                                      letterSpacing: 1
                                   ),
                                 ),
                               )
@@ -139,7 +141,8 @@ class BcaSecondYear extends StatelessWidget {
                                   "Reference Books",
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
-                                      fontWeight: FontWeight.w900
+                                      fontWeight: FontWeight.w900,
+                                      letterSpacing: 1
                                   ),
                                 ),
                               ),
@@ -177,7 +180,8 @@ class BcaSecondYear extends StatelessWidget {
                                   "Faculty for BCA",
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
-                                      fontWeight: FontWeight.w900
+                                      fontWeight: FontWeight.w900,
+                                      letterSpacing: 1
                                   ),
                                 ),
                               )

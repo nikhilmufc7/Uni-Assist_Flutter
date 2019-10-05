@@ -56,15 +56,19 @@ class Faculty extends StatelessWidget {
                                 ),
                                 Text(
                                   'Heena Bhatia',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                  letterSpacing: 2),
                                 ),
                                 Text(
-                                  'Opearting System',
+                                  'OS and WT',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0)),
+                                      fontSize: ScreenUtil.instance.setSp(10.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -88,15 +92,19 @@ class Faculty extends StatelessWidget {
                                 ),
                                 Text(
                                   'Rashmi Shinde',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                      letterSpacing: 2),
                                 ),
                                 Text(
-                                  'C Programming',
+                                  'C and Java',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0)),
+                                      fontSize: ScreenUtil.instance.setSp(10.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -128,15 +136,19 @@ class Faculty extends StatelessWidget {
                                 ),
                                 Text(
                                   'Nitin Rajput',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                      letterSpacing: 2),
                                 ),
                                 Text(
                                   'Computer Networks',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0)),
+                                      fontSize: ScreenUtil.instance.setSp(10.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -160,15 +172,19 @@ class Faculty extends StatelessWidget {
                                 ),
                                 Text(
                                   'Gagan Meena',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                      letterSpacing: 2),
                                 ),
                                 Text(
                                   'Differential Mathematics',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0)),
+                                      fontSize: ScreenUtil.instance.setSp(10.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -198,15 +214,19 @@ class Faculty extends StatelessWidget {
                                 ),
                                 Text(
                                   'Richa Purohit',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                      letterSpacing: 2),
                                 ),
                                 Text(
                                   'Software Engineering',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0)),
+                                      fontSize: ScreenUtil.instance.setSp(10.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),

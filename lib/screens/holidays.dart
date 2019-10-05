@@ -31,7 +31,7 @@ class HolidayList extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              height: deviceSize.height,
+              height: ScreenUtil.instance.setHeight(600),
               width: double.infinity,
               child: ListView(
                 physics: ScrollPhysics(),
@@ -41,167 +41,6 @@ class HolidayList extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
-                            width: ScreenUtil.instance.setWidth(160),
-                            height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Column(
-                                  children: <Widget>[
-                                    Text(
-                                      '6\u1d57\u02b0',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
-                                    ),
-                                    Text(
-                                      'Sept',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'Gauri Poojan',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.amber,
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
-                            width: ScreenUtil.instance.setWidth(160),
-                            height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Column(
-                                  children: <Widget>[
-                                    Text(
-                                      '10\u1d57\u02b0',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
-                                    ),
-                                    Text(
-                                      'Sept',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'Muharram',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.amber,
-                            ),
-                          ),
-
-                        ],
-                      ),
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
-                            width: ScreenUtil.instance.setWidth(160),
-                            height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Column(
-                                  children: <Widget>[
-                                    Text(
-                                      '12\u1d57\u02b0',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
-                                    ),
-                                    Text(
-                                      'Sept',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'Anant Chaturdashi',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(15.0)),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.amber,
-                            ),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
-                            width: ScreenUtil.instance.setWidth(160),
-                            height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Column(
-                                  children: <Widget>[
-                                    Text(
-                                      '2\u207f\u1d48',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
-                                    ),
-                                    Text(
-                                      'Oct',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  'Gandhi Jayanti',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
-                                ),
-                              ],
-                            ),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Colors.amber,
-                            ),
-                          ),
-
-                        ],
-                      ),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -232,9 +71,11 @@ class HolidayList extends StatelessWidget {
                                 ),
                                 Text(
                                   'Dassehra',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(16.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -269,9 +110,11 @@ class HolidayList extends StatelessWidget {
                                 ),
                                 Text(
                                   'Dhanteras',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -313,9 +156,11 @@ class HolidayList extends StatelessWidget {
                                 ),
                                 Text(
                                   'Diwali',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(18.0),
+                                  letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -350,9 +195,11 @@ class HolidayList extends StatelessWidget {
                                 ),
                                 Text(
                                   'Bhai Dooj',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(15.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -394,9 +241,11 @@ class HolidayList extends StatelessWidget {
                                 ),
                                 Text(
                                   'Gurunanak Jayanti',
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(14.0)),
+                                      fontSize: ScreenUtil.instance.setSp(13.0),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -425,7 +274,8 @@ class HolidayList extends StatelessWidget {
                                       'Dec',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0),
+                                          letterSpacing: 2),
                                     ),
                                   ],
                                 ),
@@ -433,7 +283,9 @@ class HolidayList extends StatelessWidget {
                                   'Christmas',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(18.0)),
+                                      fontSize: ScreenUtil.instance.setSp(14.0),
+                                    letterSpacing: 2
+                                  ),
                                 ),
                               ],
                             ),
