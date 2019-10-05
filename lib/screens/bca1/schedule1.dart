@@ -50,10 +50,7 @@ class FirstYearSchedule extends StatelessWidget {
                             color: Colors.lightBlue,
                           ),
                         ),
-
                       ),
-
-
                     ],
                   ),
                 ),
@@ -71,7 +68,6 @@ class FirstYearSchedule extends StatelessWidget {
                             height: ScreenUtil.instance.setHeight(45),
                             color: Color.fromRGBO(0, 204, 102, 0.8),
                             child: Row(
-
                               children: <Widget>[
                                 Container(
                                   width: ScreenUtil.instance.setWidth(90),
