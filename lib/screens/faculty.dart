@@ -62,14 +62,6 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                   letterSpacing: 2),
                                 ),
-                                Text(
-                                  'OS and WT',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0),
-                                      letterSpacing: 2),
-                                ),
                               ],
                             ),
                             decoration: BoxDecoration(
@@ -96,14 +88,6 @@ class Faculty extends StatelessWidget {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
                                       fontSize: ScreenUtil.instance.setSp(18.0),
-                                      letterSpacing: 2),
-                                ),
-                                Text(
-                                  'C and Java',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0),
                                       letterSpacing: 2),
                                 ),
                               ],
@@ -142,14 +126,7 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       letterSpacing: 2),
                                 ),
-                                Text(
-                                  'Computer Networks',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0),
-                                      letterSpacing: 2),
-                                ),
+
                               ],
                             ),
                             decoration: BoxDecoration(
@@ -178,14 +155,7 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       letterSpacing: 2),
                                 ),
-                                Text(
-                                  'Differential Mathematics',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0),
-                                      letterSpacing: 2),
-                                ),
+
                               ],
                             ),
                             decoration: BoxDecoration(
@@ -220,14 +190,7 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       letterSpacing: 2),
                                 ),
-                                Text(
-                                  'Software Engineering',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: ScreenUtil.instance.setSp(10.0),
-                                      letterSpacing: 2),
-                                ),
+
                               ],
                             ),
                             decoration: BoxDecoration(

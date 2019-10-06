@@ -59,13 +59,13 @@ class HolidayList extends StatelessWidget {
                                       '8\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
+                                          fontSize: ScreenUtil.instance.setSp(16.0)),
                                     ),
                                   ],
                                 ),
@@ -98,13 +98,13 @@ class HolidayList extends StatelessWidget {
                                       '25\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
+                                          fontSize: ScreenUtil.instance.setSp(16.0)),
                                     ),
                                   ],
                                 ),
@@ -144,13 +144,13 @@ class HolidayList extends StatelessWidget {
                                       '28\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
+                                          fontSize: ScreenUtil.instance.setSp(16.0)),
                                     ),
                                   ],
                                 ),
@@ -183,13 +183,13 @@ class HolidayList extends StatelessWidget {
                                       '29\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                     Text(
                                       'Oct',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
+                                          fontSize: ScreenUtil.instance.setSp(15.0)),
                                     ),
                                   ],
                                 ),
@@ -229,13 +229,13 @@ class HolidayList extends StatelessWidget {
                                       '12\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                     Text(
                                       'Nov',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0)),
+                                          fontSize: ScreenUtil.instance.setSp(16.0)),
                                     ),
                                   ],
                                 ),
@@ -268,13 +268,13 @@ class HolidayList extends StatelessWidget {
                                       '25\u1d57\u02b0',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(24.0)),
+                                          fontSize: ScreenUtil.instance.setSp(20.0)),
                                     ),
                                     Text(
                                       'Dec',
                                       style: TextStyle(
                                           fontWeight: FontWeight.w900,
-                                          fontSize: ScreenUtil.instance.setSp(20.0),
+                                          fontSize: ScreenUtil.instance.setSp(16.0),
                                           letterSpacing: 2),
                                     ),
                                   ],

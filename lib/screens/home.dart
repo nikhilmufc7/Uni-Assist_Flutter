@@ -71,6 +71,7 @@ class Home extends StatelessWidget {
                                   ),
                                   Text(
                                     'BCA 1st Year',
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontWeight: FontWeight.w900,
                                       fontSize: ScreenUtil.instance.setSp(18.0),
@@ -106,6 +107,7 @@ class Home extends StatelessWidget {
                                   ),
                                   Text(
                                     'BCA 2nd Year',
+                                    textAlign: TextAlign.center,
                                     style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       fontWeight: FontWeight.w900,
