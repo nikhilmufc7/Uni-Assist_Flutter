@@ -105,7 +105,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
               autocorrect: true,
               decoration: InputDecoration(
                 labelText: "Item",
-                hintText: "e.g Don't buy groceries",
+                hintText: "e.g Do C Assignement",
                 icon: Icon(Icons.note_add),
               ),
             ),
