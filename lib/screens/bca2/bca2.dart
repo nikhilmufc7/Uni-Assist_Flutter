@@ -68,7 +68,7 @@ class BcaSecondYear extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: ScreenUtil.instance.setSp(24.0),
                                     fontWeight: FontWeight.w900,
-                                    letterSpacing: 1
+                                    letterSpacing: 2
                                 ),
                               )
                             ],
