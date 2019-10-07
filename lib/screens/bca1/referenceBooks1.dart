@@ -7,16 +7,16 @@ class ReferenceBooks extends StatelessWidget {
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Reference Books",
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: 22,
+          title: Text(
+            "Reference Books",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 22,
+            ),
           ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+          centerTitle: true,
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7)
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -40,6 +40,7 @@ class ReferenceBooks extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.w900,
+                        letterSpacing: 2
                       ),
                     ),
                     Container(
@@ -47,16 +48,16 @@ class ReferenceBooks extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
-                          Text("For BCA",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16
-                          ),),
-                          Text("First Sem",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16
-                          ),)
+                          Text(
+                            "For BCA",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 16),
+                          ),
+                          Text(
+                            "First Sem",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 16),
+                          )
                         ],
                       ),
                     )
@@ -92,45 +93,37 @@ final List<Entry> data = <Entry>[
     <Entry>[
       Entry(
         'Programming in ANSI C by E Balguruswamy',
-
       ),
       Entry(
         'C Programming: A Modern Approach” by K N King',
       ),
       Entry(
         'Let Us C',
-
       ),
     ],
   ),
   Entry(
     'Opearting Systems',
     <Entry>[
-      Entry(
-          'TM Dhamdhere, Tata McGraw Hill'),
+      Entry('TM Dhamdhere, Tata McGraw Hill'),
       Entry(
         'William Stalling for OS',
-
       ),
     ],
   ),
   Entry(
     'Fundamentals of Computer',
     <Entry>[
-      Entry(
-          'Computer Fundamentals by PK Sinha'),
+      Entry('Computer Fundamentals by PK Sinha'),
     ],
   ),
   Entry(
     'Differential Mathematics',
     <Entry>[
-      Entry(
-          'Differential and Integral Calculus Vol. I by N S Piskunov'),
-      Entry(
-          'NCERT Class 12th Mathematics'),
+      Entry('Differential and Integral Calculus Vol. I by N S Piskunov'),
+      Entry('NCERT Class 12th Mathematics'),
     ],
   ),
-
 ];
 
 // Displays one Entry. If the entry has children then it's displayed

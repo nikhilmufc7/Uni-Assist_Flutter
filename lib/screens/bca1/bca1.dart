@@ -20,22 +20,23 @@ class BcaFirstYear extends StatelessWidget {
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "BCA First Year",
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: ScreenUtil.instance.setSp(22.0),
+          title: Text(
+            "BCA First Year",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: ScreenUtil.instance.setSp(22.0),
+            ),
           ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+          centerTitle: true,
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7),
       ),
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(top: ScreenUtil.instance.setWidth(30.0),
+              padding: EdgeInsets.only(
+                  top: ScreenUtil.instance.setWidth(30.0),
                   left: ScreenUtil.instance.setWidth(30.0),
                   right: ScreenUtil.instance.setWidth(30.0)),
               height: deviceSize.height,
@@ -47,14 +48,14 @@ class BcaFirstYear extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       InkWell(
-                        onTap: ()=> Navigator.of(context).pushNamed(FirstYearSchedule.routeName),
+                        onTap: () => Navigator.of(context)
+                            .pushNamed(FirstYearSchedule.routeName),
                         child: Container(
                           width: deviceSize.width,
                           height: ScreenUtil.instance.setHeight(80),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                              color: Color.fromRGBO(255,77,77, 0.8)
-                          ),
+                              borderRadius: BorderRadius.circular(15),
+                              color: Color.fromRGBO(255, 77, 77, 0.8)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
@@ -72,8 +73,7 @@ class BcaFirstYear extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
                                       fontWeight: FontWeight.w900,
-                                      letterSpacing: 2
-                                  ),
+                                      letterSpacing: 2),
                                 ),
                               )
                             ],
@@ -81,21 +81,19 @@ class BcaFirstYear extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height:  ScreenUtil.instance.setHeight(30),
+                        height: ScreenUtil.instance.setHeight(30),
                       ),
                       InkWell(
-                        onTap: ()=> Navigator.of(context).pushNamed(ToDoScreen.routeName),
+                        onTap: () => Navigator.of(context)
+                            .pushNamed(ToDoScreen.routeName),
                         child: Container(
                           width: deviceSize.width,
-                          height:  ScreenUtil.instance.setHeight(80),
-
+                          height: ScreenUtil.instance.setHeight(80),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                              color: Color.fromRGBO(71, 209, 209, 0.9)
-                          ),
+                              borderRadius: BorderRadius.circular(15),
+                              color: Color.fromRGBO(71, 209, 209, 0.9)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                             children: <Widget>[
                               Container(
 //                                padding: EdgeInsets.only(left: 40),
@@ -111,31 +109,27 @@ class BcaFirstYear extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
                                       fontWeight: FontWeight.w900,
-                                      letterSpacing: 2
-                                  ),
+                                      letterSpacing: 2),
                                 ),
                               )
                             ],
                           ),
                         ),
                       ),
-
                       SizedBox(
-                        height:  ScreenUtil.instance.setHeight(30),
+                        height: ScreenUtil.instance.setHeight(30),
                       ),
                       InkWell(
-                        onTap: ()=> Navigator.of(context).pushNamed(ReferenceBooks.routeName),
+                        onTap: () => Navigator.of(context)
+                            .pushNamed(ReferenceBooks.routeName),
                         child: Container(
                           width: deviceSize.width,
-                          height:  ScreenUtil.instance.setHeight(80),
-
+                          height: ScreenUtil.instance.setHeight(80),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                              color: Color.fromRGBO(255, 163, 26 ,0.8)
-                          ),
+                              borderRadius: BorderRadius.circular(15),
+                              color: Color.fromRGBO(255, 163, 26, 0.8)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                             children: <Widget>[
                               Container(
                                 child: Icon(
@@ -149,32 +143,27 @@ class BcaFirstYear extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
                                       fontWeight: FontWeight.w900,
-                                      letterSpacing: 1
-                                  ),
+                                      letterSpacing: 1),
                                 ),
                               ),
-
-
                             ],
                           ),
                         ),
                       ),
                       SizedBox(
-                        height:  ScreenUtil.instance.setHeight(30),
+                        height: ScreenUtil.instance.setHeight(30),
                       ),
                       InkWell(
-                        onTap: ()=> Navigator.of(context).pushNamed(Faculty.routeName),
+                        onTap: () =>
+                            Navigator.of(context).pushNamed(Faculty.routeName),
                         child: Container(
                           width: deviceSize.width,
-                          height:  ScreenUtil.instance.setHeight(80),
-
+                          height: ScreenUtil.instance.setHeight(80),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                              color: Color.fromRGBO(210, 121, 166, 0.8)
-                          ),
+                              borderRadius: BorderRadius.circular(15),
+                              color: Color.fromRGBO(210, 121, 166, 0.8)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
                             children: <Widget>[
                               Container(
 //                                padding: EdgeInsets.only(left: 40),
@@ -190,8 +179,7 @@ class BcaFirstYear extends StatelessWidget {
                                   style: TextStyle(
                                       fontSize: ScreenUtil.instance.setSp(24.0),
                                       fontWeight: FontWeight.w900,
-                                      letterSpacing: 1
-                                  ),
+                                      letterSpacing: 1),
                                 ),
                               )
                             ],

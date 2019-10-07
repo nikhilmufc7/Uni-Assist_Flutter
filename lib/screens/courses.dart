@@ -6,16 +6,16 @@ class CoursesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Courses",
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: 22,
+          title: Text(
+            "Courses",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 22,
+            ),
           ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+          centerTitle: true,
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7)
       ),
       body: ListView.builder(
         physics: ScrollPhysics(),
@@ -62,41 +62,34 @@ final List<Entry> data = <Entry>[
     'BBA',
     <Entry>[
       Entry('Three year integrated course for Business Administration'),
-
     ],
   ),
-
   Entry(
     'B.Sc - Biotechnology',
     <Entry>[
-      Entry('Graduates can work as expert, technician, and researcher as well as pursue teaching job with higher education.'),
-
+      Entry(
+          'Graduates can work as expert, technician, and researcher as well as pursue teaching job with higher education.'),
     ],
   ),
-
   Entry(
     'B-Des',
     <Entry>[
       Entry('Graphic and UX design course with emphasis on User Experience'),
-
     ],
   ),
-
   Entry(
     'BCom',
     <Entry>[
-      Entry('Three year course in Commerence and management. A stepping store for a career in Business.'),
-
+      Entry(
+          'Three year course in Commerence and management. A stepping store for a career in Business.'),
     ],
   ),
   Entry(
     'B.A',
     <Entry>[
       Entry('Three year course in Journalism and Mass Communication.'),
-
     ],
   ),
-
 ];
 
 // Displays one Entry. If the entry has children then it's displayed
@@ -120,4 +113,3 @@ class EntryItem extends StatelessWidget {
     return _buildTiles(entry);
   }
 }
-

@@ -34,30 +34,51 @@ with TickerProviderStateMixin{
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Schedule"),
+        title: Text("Schedule",
+        style: TextStyle(
+          color: Colors.white
+        ),),
         centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+//        backgroundColor: Color.fromRGBO(77, 77, 255, 0.7),
         bottom: TabBar(
           controller: _tabController,
           isScrollable: true,
           tabs: <Widget>[
             Tab(
-              child: Text("Monday"),
+              child: Text("Monday",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),),
             ),
             Tab(
-              child: Text("Tuesday"),
+              child: Text("Tuesday",
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
             ),
             Tab(
-              child: Text("Wednesday"),
+              child: Text("Wednesday",
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
             ),
             Tab(
-              child: Text("Thursday"),
+              child: Text("Thursday",
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
             ),
             Tab(
-              child: Text("Friday"),
+              child: Text("Friday",
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
             ),
             Tab(
-              child: Text("Saturday"),
+              child: Text("Saturday",
+                style: TextStyle(
+                  color: Colors.white,
+                ),),
             ),
 
           ],
@@ -1040,7 +1061,10 @@ with TickerProviderStateMixin{
         onPressed: () {
           Navigator.of(context).pushNamed(ToDoScreen.routeName);
         },
-        label: Text('Notes'),
+        label: Text('Notes',
+        style: TextStyle(
+          color: Colors.white
+        ),),
         icon: Icon(Icons.border_color),
         backgroundColor: Colors.pink,
       ),

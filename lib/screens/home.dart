@@ -7,6 +7,7 @@ import 'courses.dart';
 import 'about.dart';
 import '../util/drawer.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'settings_screen.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -33,8 +34,17 @@ class Home extends StatelessWidget {
             fontSize: ScreenUtil.instance.setSp(22.0),
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.settings,
+            color: Colors.white,),
+            onPressed: (){
+              Navigator.of(context).pushNamed(SettingsPage.routeName);
+            },
+          )
+        ],
         centerTitle: true,
-        backgroundColor: Color.fromRGBO(77, 77, 255, 0.7),
+//        backgroundColor: Color.fromRGBO(77, 77, 255, 0.7),
       ),
       body: SingleChildScrollView(
         child: Stack(

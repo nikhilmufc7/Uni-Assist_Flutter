@@ -41,16 +41,16 @@ class _ToDoScreenState extends State<ToDoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Add Notes ',
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: 22,
+          title: Text(
+            'Add Notes ',
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 22,
+            ),
           ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+          centerTitle: true,
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7)
       ),
       backgroundColor: Colors.white,
       body: Column(

@@ -7,16 +7,16 @@ class AboutScreen extends StatelessWidget {
     final deviceSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "About",
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            color: Colors.white,
-            fontSize: 22,
+          title: Text(
+            "About",
+            style: TextStyle(
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+              fontSize: 22,
+            ),
           ),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+          centerTitle: true,
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7)
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -124,7 +124,6 @@ final List<Entry> data = <Entry>[
           'These terms and conditions ("Terms", "Agreement") are an agreement between Mobile Application Developer ("Mobile Application Developer", "us", "we" or "our") and you ("User", "you" or "your"). This Agreement sets forth the general terms and conditions of your use of the DYPIU Assist mobile application and any of its products or services (collectively, "Mobile Application" or "Services").'),
     ],
   ),
-  
 ];
 
 // Displays one Entry. If the entry has children then it's displayed

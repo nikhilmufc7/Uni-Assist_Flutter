@@ -16,7 +16,7 @@ class ReferenceBooks2 extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7)
       ),
       body: SingleChildScrollView(
         child: Container(

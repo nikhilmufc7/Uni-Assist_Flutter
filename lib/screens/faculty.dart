@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 class Faculty extends StatelessWidget {
   static const routeName = '/faculty';
   @override
@@ -25,7 +24,7 @@ class Faculty extends StatelessWidget {
               color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
+//        backgroundColor: Color.fromRGBO(77, 77, 255, 0.7),
       ),
       body: SingleChildScrollView(
         child: Stack(
@@ -43,10 +42,12 @@ class Faculty extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            margin: EdgeInsets.only(
+                                top: ScreenUtil.instance.setWidth(20)),
                             width: ScreenUtil.instance.setWidth(160),
                             height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
+                            padding: EdgeInsets.all(
+                                ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -60,7 +61,7 @@ class Faculty extends StatelessWidget {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
                                       fontSize: ScreenUtil.instance.setSp(18.0),
-                                  letterSpacing: 2),
+                                      letterSpacing: 2),
                                 ),
                               ],
                             ),
@@ -69,12 +70,13 @@ class Faculty extends StatelessWidget {
                               color: Colors.amber,
                             ),
                           ),
-
                           Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            margin: EdgeInsets.only(
+                                top: ScreenUtil.instance.setWidth(20)),
                             width: ScreenUtil.instance.setWidth(160),
                             height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
+                            padding: EdgeInsets.all(
+                                ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -97,20 +99,18 @@ class Faculty extends StatelessWidget {
                               color: Colors.amber,
                             ),
                           ),
-
-
-
                         ],
                       ),
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            margin: EdgeInsets.only(
+                                top: ScreenUtil.instance.setWidth(20)),
                             width: ScreenUtil.instance.setWidth(160),
                             height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
+                            padding: EdgeInsets.all(
+                                ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -126,7 +126,6 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       letterSpacing: 2),
                                 ),
-
                               ],
                             ),
                             decoration: BoxDecoration(
@@ -134,12 +133,13 @@ class Faculty extends StatelessWidget {
                               color: Colors.amber,
                             ),
                           ),
-
                           Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            margin: EdgeInsets.only(
+                                top: ScreenUtil.instance.setWidth(20)),
                             width: ScreenUtil.instance.setWidth(160),
                             height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
+                            padding: EdgeInsets.all(
+                                ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -155,7 +155,6 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       letterSpacing: 2),
                                 ),
-
                               ],
                             ),
                             decoration: BoxDecoration(
@@ -163,18 +162,18 @@ class Faculty extends StatelessWidget {
                               color: Colors.amber,
                             ),
                           ),
-
                         ],
                       ),
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.only(top: ScreenUtil.instance.setWidth(20)),
+                            margin: EdgeInsets.only(
+                                top: ScreenUtil.instance.setWidth(20)),
                             width: ScreenUtil.instance.setWidth(160),
                             height: ScreenUtil.instance.setHeight(130),
-                            padding: EdgeInsets.all(ScreenUtil.instance.setWidth(15.0)),
+                            padding: EdgeInsets.all(
+                                ScreenUtil.instance.setWidth(15.0)),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: <Widget>[
@@ -190,7 +189,6 @@ class Faculty extends StatelessWidget {
                                       fontSize: ScreenUtil.instance.setSp(18.0),
                                       letterSpacing: 2),
                                 ),
-
                               ],
                             ),
                             decoration: BoxDecoration(
@@ -198,7 +196,6 @@ class Faculty extends StatelessWidget {
                               color: Colors.amber,
                             ),
                           ),
-
                         ],
                       ),
                     ],

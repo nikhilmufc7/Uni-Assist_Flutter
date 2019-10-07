@@ -33,15 +33,14 @@ class _EventsScreenState extends State<EventsScreen> {
     // TODO: implement build
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Events"),
-        backgroundColor: Colors.deepPurpleAccent,
+          title: new Text("Events"),
+//          backgroundColor: Color.fromRGBO(77, 77, 255, 0.7)
       ),
       body: Column(
         children: <Widget>[
           Flexible(
             flex: 0,
             child: Center(
-
               child: Form(
                 key: formKey,
                 child: Flex(
@@ -62,13 +61,12 @@ class _EventsScreenState extends State<EventsScreen> {
                         initialValue: "",
                         onSaved: (val) => board.body = val,
                         validator: (val) => val == "" ? val : null,
-
                       ),
                     ),
                     FlatButton(
                       child: new Text("Post"),
                       color: Colors.redAccent,
-                      onPressed:() {
+                      onPressed: () {
                         handleSubmit();
                       },
                     )
