@@ -26,7 +26,7 @@ void main() {
       var darkModeOn = prefs.getBool('darkMode') ?? true;
       runApp(
         ChangeNotifierProvider<ThemeNotifier>(
-          builder: (_) => ThemeNotifier(darkModeOn ? lightTheme : darkTheme),
+          builder: (_) => ThemeNotifier(darkModeOn ? darkTheme : lightTheme),
           child: MyApp(),
         ),
       );
