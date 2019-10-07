@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../screens/todoscreen.dart';
 import '../screens/faculty.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../screens/settings_screen.dart';
 
 class MainDrawer extends StatelessWidget {
   Widget buildListTile(String title, IconData icon, Function handlingTap) {
@@ -47,7 +48,7 @@ class MainDrawer extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: ScreenUtil.instance.setSp(30.0),
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ),
@@ -65,6 +66,9 @@ class MainDrawer extends StatelessWidget {
           }),
           buildListTile("Holidays", Icons.airline_seat_flat,(){
             Navigator.of(context).pushNamed(HolidayList.routeName);
+          }),
+          buildListTile("Settings", Icons.settings,(){
+            Navigator.of(context).pushNamed(SettingsPage.routeName);
           }),
           SizedBox(
             height: ScreenUtil.instance.setHeight(30),
